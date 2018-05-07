@@ -8,7 +8,7 @@ function main() {
     const message = document.getElementById("message");
 
     function submit() {
-        const value = input.value;
+        const value = input.valuex;
         const isValid = isEmailValid(value);
         message.className = isValid ? SUCCESS_CLASS_NAME : ERROR_CLASS_NAME;
         message.innerHTML = isValid ? "Email is OK" : "Email is WRONG";
