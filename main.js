@@ -2,16 +2,17 @@ const SUCCESS_CLASS_NAME = "success";
 const ERROR_CLASS_NAME = "error";
 const ENTER_CHAR_CODE = 13;
 
-function main() {
+function main(user) {
     const input = document.getElementById("input");
     const button = document.getElementById("button");
     const message = document.getElementById("message");
 
     function submit() {
-        const value = input.valuex;
+        const value = input.value;
         const isValid = isEmailValid(value);
+        console.log(name);
         message.className = isValid ? SUCCESS_CLASS_NAME : ERROR_CLASS_NAME;
-        message.innerHTML = isValid ? "Email is OK" : "Email is WRONG";
+        message.innerHTML = isValid ? user + " your Email is OK" : user + " your Email is WRONG";
     }
 
     button.addEventListener("click", function(event) {
@@ -26,5 +27,6 @@ function main() {
 }
 
 window.onload = function() {
-    main();
+    var name = getInput();
+    main(name);
 };

@@ -4,6 +4,6 @@ function isEmailValid(email /* string */) {
 } /* boolean */
 
 function getInput() {
-    const input = prompt("Your email");
+    const input = prompt("Your name");
     return input;
 } /* string */
